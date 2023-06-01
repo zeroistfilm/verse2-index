@@ -1,46 +1,54 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="kr">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8">
+  <title>Polygon Payment Viewer</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+
+      table {
+          border: 1px solid black;
+          border-collapse: collapse;
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      th, td {
+          border: 1px solid black;
+          padding: 10px;
+      }
+
+      th {
+          background-color: #f2f2f2;
+      }
+
+      h1 {
+          text-align: center;
+          color: #333;
+      }
+  </style>
+
 </head>
 <body>
-  <section class="center">
-    <aside class="sidebar"></aside>
-    
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
-            </div>
-          </section>
-        </section>
-      </section>
-    </section>
-  </section>
+<h1>Polygon Payment Viewer</h1>
+
+<h3>가장 최근 업데이트된 가격 정보</h3>
+<span id="ethPrice"></span>
+
+<table id="paymentsTable">
+  <tr>
+    <th>유저 지갑 주소</th>
+    <th>지급 요청 시간</th>
+    <th>실제 지급된 양</th>
+    <th> decimals </th>
+    <th>지급된 값의 가격 정보 시간</th>
+    <th>지급여부</th>
+  </tr>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
