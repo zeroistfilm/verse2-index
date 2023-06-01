@@ -548,6 +548,17 @@ async function getAllPayments() {
       updateTable(result);
     });
 }
+function sendHttpRequest() {
+
+  fetch('http://a230d0168ed1e4fa88c4cc57e75876dd-9075274.ap-northeast-2.elb.amazonaws.com/user-bot')
+    .then(function (response) {
+      return response.text();
+     })
+    .then(function (data) {
+    })
+
+}
+
 
 function updateTable(payments) {
   let table = document.getElementById('paymentsTable');
